@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  color: black;
+}
+
+.App-header {
+  width: 100%;
+  background-color: #282c34;
+  color: #ffffff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.error-text {
+  color: #ff0000;
+}
+
+#records-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  padding: 100px;
+  margin-top: 10px;
+}
+
+#records-table td, #records-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#records-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#records-table tr:hover {background-color: #ddd;}
+
+#records-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}

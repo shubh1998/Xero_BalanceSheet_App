@@ -1,0 +1,31 @@
+version: '3.5'
+
+networks:
+  xero-balance-sheet-app:
+    name: xero-balance-sheet-app
+
+services:
+  backend:
+    build: ../backend
+    ports:
+      - "3001:3001"
+    depends_on:
+      - xero-mock
+    networks:
+      - xero-balance-sheet-app
+
+  frontend:
+    build: ../frontend
+    ports:
+      - "3002:3000"
+    depends_on:
+      - backend
+    networks:
+      - xero-balance-sheet-app
+
+  xero-mock:
+    image: jaypeng2015/show-me-the-money
+    ports:
+      - "3003:3000"
+    networks:
+      - xero-balance-sheet-app
